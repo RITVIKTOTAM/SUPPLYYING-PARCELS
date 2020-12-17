@@ -1,4 +1,4 @@
-var helicopterIMG, helicopterSprite, packageSprite,packageIMG;
+var helicopterIMG, helicopterSprite, packageSprite,packageIMG,paddle1,paddle2,paddle3;
 var packageBody,ground
 const Engine = Matter.Engine;
 const World = Matter.World;
@@ -15,7 +15,12 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
-	
+	paddle1 = createSprite(390,650,70,20);
+	paddle1.shapeColor = "blue";
+	paddle2 = createSprite(345,635,20,50);
+	paddle2.shapeColor = "blue";
+	paddle3 = createSprite(435,635,20,50);
+	paddle3.shapeColor = "blue";
 
 	packageSprite=createSprite(width/2, 200, 10,10);
 	packageSprite.addImage(packageIMG)
