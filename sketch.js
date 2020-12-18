@@ -60,7 +60,7 @@ function draw() {
   
   drawSprites();
   
-  packageSprite.velocityY = 2;
+  packageSprite.velocityY = 0.5;
 
 }
 
