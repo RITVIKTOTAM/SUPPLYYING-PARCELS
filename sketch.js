@@ -57,8 +57,12 @@ function draw() {
  
   
   packageSprite.collide(paddle1);
-
-  packageSprite.velocityY = 2;
+  
+ 
+  if(keyDown(DOWN_ARROW)){
+	  packageSprite.velocityY = 5;
+}
+  
   
   drawSprites();
   
