@@ -15,11 +15,11 @@ function setup() {
 	createCanvas(800, 700);
 	rectMode(CENTER);
 	
-	paddle1 = createSprite(390,650,70,20);
+	paddle1 = createSprite(395,650,120,20);
 	paddle1.shapeColor = "blue";
 	paddle2 = createSprite(345,635,20,50);
 	paddle2.shapeColor = "blue";
-	paddle3 = createSprite(435,635,20,50);
+	paddle3 = createSprite(465,635,20,50);
 	paddle3.shapeColor = "blue";
 
 	packageSprite=createSprite(width/2, 200, 10,10);
@@ -37,9 +37,9 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:false});
-	World.add(world, packageBody);
 	
+	package = Bodies.rectangle(width/2,200,10,10,{istatic:false});
+	World.add(world,package);
 
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
@@ -54,13 +54,15 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(0);
-  packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y
+ 
   
+  packageSprite.collide(paddle1);
+
+  packageSprite.velocityY = 2;
   
   drawSprites();
   
-  packageSprite.velocityY = 0.5;
+ 
 
 }
 
