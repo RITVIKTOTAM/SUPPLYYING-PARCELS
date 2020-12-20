@@ -60,7 +60,7 @@ function draw() {
   
  
   if(keyDown(DOWN_ARROW)){
-	  packageSprite.velocityY = 5.5;
+	  packageSprite.velocityY = 5;
 }
   
   
